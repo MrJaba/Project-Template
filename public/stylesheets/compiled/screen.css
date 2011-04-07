@@ -605,43 +605,59 @@ body.two-col #content {
   overflow-x: hidden;
 }
 
-/* line 2, ../../../app/stylesheets/partials/_application.scss */
+/* line 5, ../../../app/stylesheets/partials/_application.scss */
+body.two-columns {
+  background-color: #f1f1f1;
+}
+/* line 7, ../../../app/stylesheets/partials/_application.scss */
 body.two-columns #container {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
+  background-color: #e4e4e4;
 }
-/* line 4, ../../../app/stylesheets/partials/_application.scss */
-body.two-columns #header, body.two-columns #footer {
+/* line 11, ../../../app/stylesheets/partials/_application.scss */
+body.two-columns #container #header, body.two-columns #container #footer {
+  -moz-box-shadow: #333333 1px 1px 5px 0;
+  -webkit-box-shadow: #333333 1px 1px 5px 0;
+  -o-box-shadow: #333333 1px 1px 5px 0;
+  box-shadow: #333333 1px 1px 5px 0;
+  padding: 10px;
+  color: #f2f2f2;
+  background-color: #1d1e23;
   display: inline;
   float: left;
   margin-right: 10px;
   width: 950px;
 }
+/* line 13, ../../../app/stylesheets/partials/_application.scss */
+body.two-columns #container #header h1, body.two-columns #container #footer h1 {
+  color: #f2f2f2;
+}
 /* line 138, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-columns #header, * html body.two-columns #footer {
+* html body.two-columns #container #header, * html body.two-columns #container #footer {
   overflow-x: hidden;
 }
-/* line 6, ../../../app/stylesheets/partials/_application.scss */
-body.two-columns #sidebar {
+/* line 22, ../../../app/stylesheets/partials/_application.scss */
+body.two-columns #container #sidebar {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 310px;
 }
 /* line 138, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-columns #sidebar {
+* html body.two-columns #container #sidebar {
   overflow-x: hidden;
 }
-/* line 10, ../../../app/stylesheets/partials/_application.scss */
-body.two-columns #content {
+/* line 28, ../../../app/stylesheets/partials/_application.scss */
+body.two-columns #container #content {
   display: inline;
   float: left;
   margin-right: 0;
   width: 630px;
 }
 /* line 138, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-columns #content {
+* html body.two-columns #container #content {
   overflow-x: hidden;
 }

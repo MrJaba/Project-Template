@@ -1,15 +1,36 @@
+$background-color: #f1f1f1;
+$header-color:#1d1e23;
+$header-text-color:#f2f2f2;
+
 body.two-columns {  
+  background-color:$background-color;
   #container {
-    @include container; }
-  #header, #footer {
-    @include column($blueprint-grid-columns); }
-  #sidebar {
-    // One third of the grid columns, rounding down. With 24 cols, this is 8.
-    $sidebar-columns: floor($blueprint-grid-columns / 3);
-    @include column($sidebar-columns); }
-  #content {
-    // Two thirds of the grid columns, rounding up.
-    // With 24 cols, this is 16.
-    $content-columns: ceil(2 * $blueprint-grid-columns / 3);
-    // true means it's the last column in the row
-    @include column($content-columns, true); } }
+    @include container; 
+    
+    #header, #footer 
+    {
+      @include box-shadow;
+      h1{
+        color:$header-text-color;
+      }
+      padding:10px;      
+      color:$header-text-color;      
+      background-color:$header-color;    
+      @include column($blueprint-grid-columns); 
+    }
+    
+    #sidebar {
+      // One third of the grid columns, rounding down. With 24 cols, this is 8.
+      $sidebar-columns: floor($blueprint-grid-columns / 3);      
+      @include column($sidebar-columns);      
+    }
+      
+    #content {
+      // Two thirds of the grid columns, rounding up.
+      // With 24 cols, this is 16.
+      $content-columns: ceil(2 * $blueprint-grid-columns / 3);
+      // true means it's the last column in the row
+      @include column($content-columns, true); }       
+      background-color:darken($background-color, 5%);
+    }
+  }
